@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Chirath Chamuditha</title>
+    <meta
+      name="description"
+      content="Portfolio of a passionate Software Engineer specializing in modern web technologies."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00f3ff",
+              secondary: "#bc13fe",
+              dark: "#0a0a0a",
+              light: "#f0f2f5",
+            },
+            fontFamily: {
+              sans: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-dark text-gray-200 overflow-x-hidden selection:bg-primary selection:text-black"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a
+              href="#"
+              class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary neon-text"
+            >
+              MY_PORTFOLIO
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#skills"
+                class="hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                >Tech Stack</a
+              >
+              <a
+                href="#projects"
+                class="hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                >Projects</a
+              >
+              <a
+                href="#contact"
+                class="hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                >Contact</a
+              >
+              <button
+                id="theme-toggle"
+                class="hover:text-yellow-400 transition-colors duration-300 p-2 rounded-full border border-white/10 hover:border-yellow-400/50"
+                aria-label="Toggle Dark Mode"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="-mr-2 flex md:hidden">
+            <button
+              id="menu-btn"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700/50 focus:outline-none"
+              aria-label="Open Mobile Menu"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-dark/95 backdrop-blur-xl border-b border-white/10"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-white/5"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-white/5"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-white/5"
+            >Tech Stack</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-white/5"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-white/5"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center relative pt-20"
+    >
+      <!-- Background Elements -->
+      <div
+        class="blob absolute top-20 left-20 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+      ></div>
+      <div
+        class="blob absolute bottom-20 right-20 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animation-delay-2000"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="text-center">
+          <h2
+            class="text-primary font-medium tracking-wide text-lg mb-4"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            HELLO THERE 👋
+          </h2>
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            I'm
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary neon-text"
+              >Chirath Chamuditha</span
+            >
+          </h1>
+          <div
+            class="text-2xl md:text-3xl text-gray-400 mb-8 h-12"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <span id="typed-text" class="text-white font-semibold"></span>
+          </div>
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <a
+              href="#projects"
+              class="neon-btn px-8 py-3 rounded-full bg-transparent border border-primary text-white font-semibold hover:bg-primary/10 transition-all"
+            >
+              View Work
+            </a>
+            <a
+              href="#contact"
+              class="px-8 py-3 rounded-full border border-gray-600 hover:border-white transition-all hover:bg-white/5"
+            >
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+          >
+            <a
+              href="#about"
+              class="text-gray-500 hover:text-primary transition-colors"
+              aria-label="Scroll to About Section"
+            >
+              <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative group max-w-sm mx-auto" data-aos="fade-right">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+            ></div>
+            <div
+              class="relative rounded-lg overflow-hidden border border-white/10 glass-card p-2"
+            >
+              <!-- Profile Image Placeholder -->
+              <img
+                src="img/Me.jpg"
+                alt="Profile"
+                class="w-full h-auto rounded-lg transition-all duration-500"
+              />
+            </div>
+          </div>
+          <div data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+              <span class="text-primary mr-2"></span> About Me
+            </h2>
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Hello! I'm an undergraduate software engineer with a passion for
+              building digital experiences that live on the internet.  I have a
+solid background in HTML, CSS, JavaScript, Python, SQL, OOP along with experience in software
+engineering. I have hands-on experiences in developing, testing, and maintaining software solutions. I enjoy
+working in teams and agile settings. 
+            </p>
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Fast-forward to today, and I’ve had the privilege of completing my Higher Diploma
+               in Computing & Software Engineering (ICBT linked with Cardiff Metropolitan
+                University, UK). I’m always eager to learn and adapt to new tech while making a
+                 real impact in a forward-thinking global organization.
+            </p>
+            <!--<div class="grid grid-cols-2 gap-4 text-sm font-mono text-gray-300">
+              <div class="flex items-center">
+                <i class="fas fa-caret-right text-primary mr-2"></i> JavaScript
+                (ES6+)
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-caret-right text-primary mr-2"></i> React
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-caret-right text-primary mr-2"></i> Node.js
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-caret-right text-primary mr-2"></i> Tailwind
+                CSS
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section id="experience" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
+          <span class="text-primary"></span> Experience & Education
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Education -->
+          <div data-aos="fade-right">
+            <h3
+              class="text-xl font-semibold mb-6 flex items-center text-secondary"
+            >
+              <i class="fas fa-graduation-cap mr-3"></i> Education
+            </h3>
+            <div class="space-y-6" id="education-list">
+              <!-- Dynamically Populated -->
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div data-aos="fade-left">
+            <h3
+              class="text-xl font-semibold mb-6 flex items-center text-primary"
+            >
+              <i class="fas fa-briefcase mr-3"></i> Experience
+            </h3>
+            <div class="space-y-6" id="experience-list">
+              <!-- Dynamically Populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="skills" class="py-20 bg-black/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
+          <span class="text-primary"></span> Tech Stack
+        </h2>
+
+        <div
+          id="tech-stack-container"
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center"
+        >
+          <!-- Dynamically Populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
+          <span class="text-primary"></span> Featured Projects
+        </h2>
+
+        <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamically Populated -->
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-primary hover:underline underline-offset-4 transition-all"
+          >
+            View Full Project Archive <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black/30">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">
+          <span class="text-primary"></span> Get In Touch
+        </h2>
+        <p
+          class="text-gray-400 mb-12 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          I'm currently looking for new opportunities. Whether you have a
+          question or just want to say hi, I'll try my best to get back to you!
+        </p>
+
+        <div
+          class="glass-card p-8 rounded-xl max-w-lg mx-auto"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <form class="space-y-6">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="text-left">
+                <label class="block text-sm font-medium text-gray-400 mb-1"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary input-focus-effect transition-colors"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="text-left">
+                <label class="block text-sm font-medium text-gray-400 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary input-focus-effect transition-colors"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+            <div class="text-left">
+              <label class="block text-sm font-medium text-gray-400 mb-1"
+                >Message</label
+              >
+              <textarea
+                rows="4"
+                class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary input-focus-effect transition-colors"
+                placeholder="Your message here..."
+              ></textarea>
+            </div>
+            <button
+              type="button"
+              class="w-full neon-btn py-3 rounded-lg bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary text-primary font-bold hover:text-white"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div class="mt-12 flex justify-center space-x-8">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-primary text-2xl transition-colors"
+            aria-label="GitHub Profile"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-blue-500 text-2xl transition-colors"
+             aria-label="LinkedIn Profile"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-sky-400 text-2xl transition-colors"
+             aria-label="Twitter Profile"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-pink-500 text-2xl transition-colors"
+             aria-label="Instagram Profile"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10 text-center">
+      <p class="text-gray-500 text-sm">
+        Designed & Built by <span class="text-primary">Your Name</span>
+      </p>
+      <p class="text-gray-600 text-xs mt-2">
+        &copy; <span id="current-year"></span> All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
