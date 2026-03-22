@@ -331,3 +331,13 @@ body.light-mode textarea:focus {
 .carousel-next {
     right: 10px;
 }
+
+/* Lightbox Modal Helper */
+#image-modal.modal-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#image-modal.modal-active #modal-img {
+    transform: scale(1);
+}

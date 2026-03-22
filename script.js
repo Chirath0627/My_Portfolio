@@ -32,41 +32,40 @@ const data = {
     { name: "GitHub", colorClass: "group-hover:text-white" },
   ],
   projects: [
-    {
-      title: "Modern To-Do List",
-      description:
-        "A full-stack e-commerce solution with cart functionality, user authentication, and payment gateway integration.",
-      stack: ["React", "Node", "MongoDB"],
-      images: [
-        "D:\My_New_Portfolio\img\ToDo List ss1.png",
-        "https://placehold.co/600x400/2a2a2a/FFF?text=Project+One+2",
-        "https://placehold.co/600x400/3a3a3a/FFF?text=Project+One+3",
-      ],
-      links: { code: "#", demo: "#" },
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A productivity tool for managing daily tasks with drag-and-drop features and real-time updates.",
-      stack: ["Vue.js", "Firebase", "Tailwind"],
-      images: [
-        "https://placehold.co/600x400/2a2a2a/FFF?text=Project+Two+1",
-        "https://placehold.co/600x400/3a3a3a/FFF?text=Project+Two+2",
-      ],
-      links: { code: "#", demo: "#" },
-    },
-    {
-      title: "AI Weather Dashboard",
-      description:
-        "Real-time weather tracking application utilizing open weather APIs and AI for basic forecasting.",
-      stack: ["JavaScript", "API", "CSS3"],
-      images: [
-        "https://placehold.co/600x400/3a3a3a/FFF?text=Project+Three+1",
-        "https://placehold.co/600x400/4a4a4a/FFF?text=Project+Three+2",
-      ],
-      links: { code: "#", demo: "#" },
-    },
-  ],
+        {
+            title: "Carecompass",
+            description: "A healthcare platform or application for managing patient data and appointments.",
+            stack: ["React", "Node.js", "MongoDB"],
+            images: [
+                "img/Carecompass ss1.png",
+                "img/Carecompass ss2.png",
+                "img/Carecompass ss3.png"
+            ],
+            links: { code: "#", demo: "#" }
+        },
+        {
+            title: "CityCycle",
+            description: "A tracking and rental platform for city bicycles with real-time availability.",
+            stack: ["Vue.js", "Firebase", "Tailwind"],
+            images: [
+                "img/CityCycle1.png",
+                "img/CityCycle2.png",
+                "img/CityCycle3.png"
+            ],
+            links: { code: "#", demo: "#" }
+        },
+        {
+            title: "LovPet",
+            description: "An application dedicated to pet care, health tracking, and finding local pet services.",
+            stack: ["HTML5", "CSS3", "JavaScript"],
+            images: [
+                "img/LovPet1.png",
+                "img/LovPet2.png",
+                "img/LovPet3.png"
+            ],
+            links: { code: "#", demo: "#" }
+        }
+    ],
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -86,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   updateFooterYear();
   initCarousels(); // Must be called AFTER rendering projects
+  initLightbox(); // Must be called AFTER rendering projects
 });
 
 // Render Functions
@@ -154,7 +154,7 @@ function renderProjects() {
                       .map(
                         (img, i) => `
                         <div class="carousel-item ${i === 0 ? "active" : ""}">
-                            <img src="${img}" alt="${project.title} Image ${i + 1}" class="w-full h-full object-cover">
+                            <img src="${img}" alt="${project.title} Image ${i + 1}" data-project-index="${index}" data-image-index="${i}" class="w-full h-full object-cover cursor-pointer lightbox-trigger">
                         </div>
                     `,
                       )
@@ -296,4 +296,89 @@ function initCarousels() {
       });
     }
   });
+}
+
+function initLightbox() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementById('close-modal');
+    const prevBtn = document.getElementById('modal-prev');
+    const nextBtn = document.getElementById('modal-next');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    let currentProjectIndex = null;
+    let currentImageIndex = null;
+
+    if (!modal || !modalImg) return;
+
+    function updateLightboxImage() {
+        if (currentProjectIndex !== null && currentImageIndex !== null) {
+            modalImg.src = data.projects[currentProjectIndex].images[currentImageIndex];
+        }
+    }
+
+    // Open lightbox
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            currentProjectIndex = parseInt(this.getAttribute('data-project-index'));
+            currentImageIndex = parseInt(this.getAttribute('data-image-index'));
+            
+            updateLightboxImage();
+            modal.classList.add('modal-active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            if (data.projects[currentProjectIndex].images.length > 1) {
+                if(prevBtn) prevBtn.classList.remove('hidden');
+                if(nextBtn) nextBtn.classList.remove('hidden');
+            }
+        });
+    });
+
+    // Close lightbox routine
+    const closeModal = () => {
+        modal.classList.remove('modal-active');
+        document.body.style.overflow = ''; // Restore scrolling
+        if(prevBtn) prevBtn.classList.add('hidden');
+        if(nextBtn) nextBtn.classList.add('hidden');
+        
+        setTimeout(() => modalImg.src = '', 300);
+        currentProjectIndex = null;
+        currentImageIndex = null;
+    };
+
+    // Nav functions
+    const showPrevImage = () => {
+        if (currentProjectIndex === null) return;
+        const totalImages = data.projects[currentProjectIndex].images.length;
+        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : totalImages - 1;
+        updateLightboxImage();
+    };
+
+    const showNextImage = () => {
+        if (currentProjectIndex === null) return;
+        const totalImages = data.projects[currentProjectIndex].images.length;
+        currentImageIndex = (currentImageIndex < totalImages - 1) ? currentImageIndex + 1 : 0;
+        updateLightboxImage();
+    };
+
+    // Event Listeners
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (prevBtn) prevBtn.addEventListener('click', showPrevImage);
+    if (nextBtn) nextBtn.addEventListener('click', showNextImage);
+
+    // Close on click outside image
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Keyboard events
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('modal-active')) return;
+        
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') showPrevImage();
+        if (e.key === 'ArrowRight') showNextImage();
+    });
 }

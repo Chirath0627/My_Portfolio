@@ -452,6 +452,25 @@ working in teams and agile settings.
       </p>
     </footer>
 
+    <!-- Image Lightbox Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300">
+      <div class="relative max-w-5xl w-full p-4 flex flex-col items-center">
+        <!-- Close button -->
+        <button id="close-modal" class="absolute top-4 right-4 md:right-8 text-white hover:text-primary transition-colors z-50 p-2" aria-label="Close Image">
+          <i class="fas fa-times text-3xl drop-shadow-md"></i>
+        </button>
+        <!-- Navigation Buttons -->
+        <button id="modal-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors z-50 p-4 text-4xl drop-shadow-lg hidden" aria-label="Previous Image">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="modal-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors z-50 p-4 text-4xl drop-shadow-lg hidden" aria-label="Next Image">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <!-- Fullsize Image Container -->
+        <img id="modal-img" src="" alt="Full Screen Project Image" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300" />
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
