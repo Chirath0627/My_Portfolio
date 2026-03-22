@@ -51,9 +51,9 @@ const data = {
         "A comprehensive productivity app that helps you plan your day effectively and track your progress with visual feedback.",
       stack: ["HTML", "CSS", "JavaScript"],
       images: [
-        "img/ToDO List ss1.png",
-        "img/ToDO List ss2.png",
-        "img/ToDO List ss3.png",
+        "img/ToDo List ss1.png",
+        "img/ToDo List ss2.png",
+        "img/ToDo List ss3.png",
       ],
       links: { demo: "#" },
     },
