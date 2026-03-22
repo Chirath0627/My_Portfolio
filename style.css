@@ -107,12 +107,13 @@ body {
 }
 
 /* Glassmorphism */
-.glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
 
 /* Gradient Text */
 .gradient-text {
@@ -164,8 +165,13 @@ body.light-mode .text-white {
     color: #1a1a1a !important;
 }
 
+body.light-mode .neon-text {
+  text-shadow: none !important;
+}
+
 body.light-mode #typed-text {
-  color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 700;
 }
 
 body.light-mode .neon-btn {

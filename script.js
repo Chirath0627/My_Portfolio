@@ -5,7 +5,20 @@ const data = {
       title: "HD in Computing and Software Engineering",
       institution: "ICBT Campus linked in Cardiff Metropoliton Univercity",
       description:
-        "I completed HD in Computing and Software Engineering with a Merit Pass",
+        "Completed HD in Computing and Software Engineering with a Merit Pass",
+    },
+    {
+      period: "2022",
+      title: "G.C.E Advanced Level - Biological Science",
+      institution: "Bandarawela Central College",
+      description:
+        "Completed Advanced Level Examination in the Biological Science stream.",
+    },
+    {
+      period: "2019",
+      title: "G.C.E Ordinary Level",
+      institution: "Bandarawela Central College",
+      description: "Completed Ordinary Level Examination.",
     },
   ],
   experience: [
@@ -32,40 +45,81 @@ const data = {
     { name: "GitHub", colorClass: "group-hover:text-white" },
   ],
   projects: [
-        {
-            title: "Carecompass",
-            description: "A healthcare platform or application for managing patient data and appointments.",
-            stack: ["React", "Node.js", "MongoDB"],
-            images: [
-                "img/Carecompass ss1.png",
-                "img/Carecompass ss2.png",
-                "img/Carecompass ss3.png"
-            ],
-            links: { code: "#", demo: "#" }
-        },
-        {
-            title: "CityCycle",
-            description: "A tracking and rental platform for city bicycles with real-time availability.",
-            stack: ["Vue.js", "Firebase", "Tailwind"],
-            images: [
-                "img/CityCycle1.png",
-                "img/CityCycle2.png",
-                "img/CityCycle3.png"
-            ],
-            links: { code: "#", demo: "#" }
-        },
-        {
-            title: "LovPet",
-            description: "An application dedicated to pet care, health tracking, and finding local pet services.",
-            stack: ["HTML5", "CSS3", "JavaScript"],
-            images: [
-                "img/LovPet1.png",
-                "img/LovPet2.png",
-                "img/LovPet3.png"
-            ],
-            links: { code: "#", demo: "#" }
-        }
-    ],
+    {
+      title: "Modern To-Do WebApp",
+      description:
+        "A comprehensive productivity app that helps you plan your day effectively and track your progress with visual feedback.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      images: [
+        "img/ToDO List ss1.png",
+        "img/ToDO List ss2.png",
+        "img/ToDO List ss3.png",
+      ],
+      links: { demo: "#" },
+    },
+    {
+      title: "Carecompass",
+      description:
+        "A healthcare platform or application for managing patient data and appointments.",
+      stack: ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
+      images: [
+        "img/Carecompass ss1.png",
+        "img/Carecompass ss2.png",
+        "img/Carecompass ss3.png",
+        "img/Carecompass ss4.png",
+        "img/Carecompass ss5.png",
+        "img/Carecompass ss6.png",
+        "img/Carecompass ss7.png",
+        "img/Carecompass ss8.png",
+        "img/Carecompass ss9.png",
+        "img/Carecompass ss10.png",
+        "img/Carecompass ss11.png",
+        "img/Carecompass ss12.png",
+        "img/Carecompass ss13.png",
+        "img/Carecompass ss14.png",
+      ],
+      links: { demo: "#" },
+    },
+    {
+      title: "CityCycle",
+      description:
+        "A tracking and rental platform for city bicycles with real-time availability.",
+      stack: ["JAVA", "XML", "SQLite"],
+      images: [
+        "img/CityCycle1.png",
+        "img/CityCycle2.png",
+        "img/CityCycle3.png",
+        "img/CityCycle4.png",
+        "img/CityCycle5.png",
+        "img/CityCycle6.png",
+        "img/CityCycle7.png",
+        "img/CityCycle8.png",
+        "img/CityCycle9.png",
+        "img/CityCycle10.png",
+        "img/CityCycle11.png",
+      ],
+      links: { demo: "#" },
+    },
+    {
+      title: "LovPet",
+      description:
+        "An application dedicated to pet care, health tracking, and finding local pet services.",
+      stack: ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
+      images: [
+        "img/LovPet1.png",
+        "img/LovPet2.png",
+        "img/LovPet3.png",
+        "img/LovPet4.png",
+        "img/LovPet5.png",
+        "img/LovPet6.png",
+        "img/LovPet7.png",
+        "img/LovPet8.png",
+        "img/LovPet9.png",
+        "img/LovPet10.png",
+      ],
+      links: { demo: "#" },
+    },
+  ],
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -175,9 +229,6 @@ function renderProjects() {
                     ${project.stack.map((tech) => `<span class="px-2 py-1 bg-white/5 rounded">${tech}</span>`).join("")}
                 </div>
                 <div class="flex gap-4 mt-2">
-                    <a href="${project.links.code}" class="flex items-center gap-2 text-sm text-primary hover:text-white transition-colors" aria-label="View Project Code">
-                        <i class="fab fa-github"></i> Code
-                    </a>
                     <a href="${project.links.demo}" class="flex items-center gap-2 text-sm text-secondary hover:text-white transition-colors" aria-label="View Live Demo">
                         <i class="fas fa-external-link-alt"></i> Live Demo
                     </a>
@@ -299,86 +350,89 @@ function initCarousels() {
 }
 
 function initLightbox() {
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-img');
-    const closeBtn = document.getElementById('close-modal');
-    const prevBtn = document.getElementById('modal-prev');
-    const nextBtn = document.getElementById('modal-next');
-    const triggers = document.querySelectorAll('.lightbox-trigger');
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.getElementById("close-modal");
+  const prevBtn = document.getElementById("modal-prev");
+  const nextBtn = document.getElementById("modal-next");
+  const triggers = document.querySelectorAll(".lightbox-trigger");
 
-    let currentProjectIndex = null;
-    let currentImageIndex = null;
+  let currentProjectIndex = null;
+  let currentImageIndex = null;
 
-    if (!modal || !modalImg) return;
+  if (!modal || !modalImg) return;
 
-    function updateLightboxImage() {
-        if (currentProjectIndex !== null && currentImageIndex !== null) {
-            modalImg.src = data.projects[currentProjectIndex].images[currentImageIndex];
-        }
+  function updateLightboxImage() {
+    if (currentProjectIndex !== null && currentImageIndex !== null) {
+      modalImg.src =
+        data.projects[currentProjectIndex].images[currentImageIndex];
     }
+  }
 
-    // Open lightbox
-    triggers.forEach(trigger => {
-        trigger.addEventListener('click', function() {
-            currentProjectIndex = parseInt(this.getAttribute('data-project-index'));
-            currentImageIndex = parseInt(this.getAttribute('data-image-index'));
-            
-            updateLightboxImage();
-            modal.classList.add('modal-active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            
-            if (data.projects[currentProjectIndex].images.length > 1) {
-                if(prevBtn) prevBtn.classList.remove('hidden');
-                if(nextBtn) nextBtn.classList.remove('hidden');
-            }
-        });
+  // Open lightbox
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", function () {
+      currentProjectIndex = parseInt(this.getAttribute("data-project-index"));
+      currentImageIndex = parseInt(this.getAttribute("data-image-index"));
+
+      updateLightboxImage();
+      modal.classList.add("modal-active");
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+
+      if (data.projects[currentProjectIndex].images.length > 1) {
+        if (prevBtn) prevBtn.classList.remove("hidden");
+        if (nextBtn) nextBtn.classList.remove("hidden");
+      }
     });
+  });
 
-    // Close lightbox routine
-    const closeModal = () => {
-        modal.classList.remove('modal-active');
-        document.body.style.overflow = ''; // Restore scrolling
-        if(prevBtn) prevBtn.classList.add('hidden');
-        if(nextBtn) nextBtn.classList.add('hidden');
-        
-        setTimeout(() => modalImg.src = '', 300);
-        currentProjectIndex = null;
-        currentImageIndex = null;
-    };
+  // Close lightbox routine
+  const closeModal = () => {
+    modal.classList.remove("modal-active");
+    document.body.style.overflow = ""; // Restore scrolling
+    if (prevBtn) prevBtn.classList.add("hidden");
+    if (nextBtn) nextBtn.classList.add("hidden");
 
-    // Nav functions
-    const showPrevImage = () => {
-        if (currentProjectIndex === null) return;
-        const totalImages = data.projects[currentProjectIndex].images.length;
-        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : totalImages - 1;
-        updateLightboxImage();
-    };
+    setTimeout(() => (modalImg.src = ""), 300);
+    currentProjectIndex = null;
+    currentImageIndex = null;
+  };
 
-    const showNextImage = () => {
-        if (currentProjectIndex === null) return;
-        const totalImages = data.projects[currentProjectIndex].images.length;
-        currentImageIndex = (currentImageIndex < totalImages - 1) ? currentImageIndex + 1 : 0;
-        updateLightboxImage();
-    };
+  // Nav functions
+  const showPrevImage = () => {
+    if (currentProjectIndex === null) return;
+    const totalImages = data.projects[currentProjectIndex].images.length;
+    currentImageIndex =
+      currentImageIndex > 0 ? currentImageIndex - 1 : totalImages - 1;
+    updateLightboxImage();
+  };
 
-    // Event Listeners
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (prevBtn) prevBtn.addEventListener('click', showPrevImage);
-    if (nextBtn) nextBtn.addEventListener('click', showNextImage);
+  const showNextImage = () => {
+    if (currentProjectIndex === null) return;
+    const totalImages = data.projects[currentProjectIndex].images.length;
+    currentImageIndex =
+      currentImageIndex < totalImages - 1 ? currentImageIndex + 1 : 0;
+    updateLightboxImage();
+  };
 
-    // Close on click outside image
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+  // Event Listeners
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (prevBtn) prevBtn.addEventListener("click", showPrevImage);
+  if (nextBtn) nextBtn.addEventListener("click", showNextImage);
 
-    // Keyboard events
-    document.addEventListener('keydown', (e) => {
-        if (!modal.classList.contains('modal-active')) return;
-        
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowLeft') showPrevImage();
-        if (e.key === 'ArrowRight') showNextImage();
-    });
+  // Close on click outside image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Keyboard events
+  document.addEventListener("keydown", (e) => {
+    if (!modal.classList.contains("modal-active")) return;
+
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowLeft") showPrevImage();
+    if (e.key === "ArrowRight") showNextImage();
+  });
 }
