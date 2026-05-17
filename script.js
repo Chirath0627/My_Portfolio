@@ -47,20 +47,40 @@ const data = {
   projects: [
     {
       title: "Modern To-Do WebApp",
-      description:
-        "A comprehensive productivity app that helps you plan your day effectively and track your progress with visual feedback.",
+      description: `A comprehensive productivity app that helps you plan your day effectively and track your progress with visual feedback. In here you can motivated.<br/><br/>
+            ✨ Key Features:<br/>
+              &nbsp;&nbsp;&nbsp;📋 Life Targets Management<br/>
+              &nbsp;&nbsp;&nbsp;⏰ Smart Task Planning<br/>
+              &nbsp;&nbsp;&nbsp;🔒 Day Lock System<br/>
+              &nbsp;&nbsp;&nbsp;📊 Real-Time Progress Tracking<br/>
+              &nbsp;&nbsp;&nbsp;✅ Task Completion<br/>
+              &nbsp;&nbsp;&nbsp;🎯 10-Hour Rule<br/>
+              &nbsp;&nbsp;&nbsp;🐦 Animated Feedback<br/>
+              &nbsp;&nbsp;&nbsp;📅 Previous Days History<br/>
+              &nbsp;&nbsp;&nbsp;🔄 Easy Restart`,
       stack: ["HTML", "CSS", "JavaScript"],
       images: [
         "img/ToDo List ss1.png",
         "img/ToDo List ss2.png",
         "img/ToDo List ss3.png",
       ],
-      links: { demo: "#" },
+      links: { demo: "https://chirath0627.github.io/Modern-To-Do-List/" },
     },
     {
       title: "Carecompass",
-      description:
-        "A healthcare platform or application for managing patient data and appointments.",
+      description: `This system is designed to improve patient convenience, hospital efficiency, and online accessibility.<br/><br/>
+            ✨ Key Features:<br>
+              &nbsp;&nbsp;&nbsp;🏥 Explore Facilities & Services<br>
+              &nbsp;&nbsp;&nbsp;👨⚕️ Discover Medical Specialties<br>
+              &nbsp;&nbsp;&nbsp;🔬 Explore Laboratory Facilities<br>
+              &nbsp;&nbsp;&nbsp;📝 About Page with mission, vision & hospital background<br>
+              &nbsp;&nbsp;&nbsp;📞 Contact & hospital details<br>
+              &nbsp;&nbsp;&nbsp;🧑💻 User Authentication – Register & Login for patients<br>
+              &nbsp;&nbsp;&nbsp;🧑💻 Admin, Staff dashboards and registered patient's profile<br>
+              &nbsp;&nbsp;&nbsp;📅 Online Appointment Booking for doctors & specialties<br>
+              &nbsp;&nbsp;&nbsp;⭐ Feedback System where patients can submit reviews<br>
+              &nbsp;&nbsp;&nbsp;👀 Public Review Display showing real patient feedback<br>
+              &nbsp;&nbsp;&nbsp;💳 Online Payment support with card payment option`,
       stack: ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
       images: [
         "img/Carecompass ss1.png",
@@ -82,8 +102,22 @@ const data = {
     },
     {
       title: "CityCycle",
-      description:
-        "A tracking and rental platform for city bicycles with real-time availability.",
+      description: `I developed a modern mobile application called CityCycle Rentals, designed to make bike renting easier, faster, and fully digital. The app helps users locate nearby bikes, track rental time, make payments, and enjoy a smooth renting experience. It also includes a powerful admin panel for full system management.<br/><br/>
+            ✨ Key Features:<br>
+              &nbsp;&nbsp;&nbsp;📍 Nearby Bike Locations<br>
+              &nbsp;&nbsp;&nbsp;🚲 Available Bikes & Pricing<br>
+              &nbsp;&nbsp;&nbsp;🎁 Discount Promotions<br>
+              &nbsp;&nbsp;&nbsp;🕒 Time Tracking System<br>
+              &nbsp;&nbsp;&nbsp;💳 Payment System<br>
+              &nbsp;&nbsp;&nbsp;📜 Rental History<br>
+              &nbsp;&nbsp;&nbsp;🧑💼 User Profile<br>
+              &nbsp;&nbsp;&nbsp;🧑💻 User Authentication – Register & Login for users<br>
+              &nbsp;&nbsp;&nbsp;🖥️ Admin Panel – Admin can manage:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👥 Users<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚲 Bikes<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💸 Payments<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎁 Promotions<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Bike locations & availability`,
       stack: ["JAVA", "XML", "SQLite"],
       images: [
         "img/CityCycle1.png",
@@ -102,8 +136,24 @@ const data = {
     },
     {
       title: "LovPet",
-      description:
-        "An application dedicated to pet care, health tracking, and finding local pet services.",
+      description: `I developed a fully functional Pet Selling Website that connects buyers, sellers, and administrators in one powerful platform. This system allows users to buy pets, sell pets, purchase accessories, and manage lost pet notices with an efficient and secure interface.<br/><br/>
+            ✨ Key Features:<br>
+              &nbsp;&nbsp;&nbsp;🐶 Buy and Selling Pets Online<br>
+              &nbsp;&nbsp;&nbsp;🛒 Pet Accessories Store<br>
+              &nbsp;&nbsp;&nbsp;🔍 Users can Add Lost Pet Notices<br>
+              &nbsp;&nbsp;&nbsp;👤 Buyer Site with dashboards<br>
+              &nbsp;&nbsp;&nbsp;🛍️ Seller Site with dashboards<br>
+              &nbsp;&nbsp;&nbsp;🧑💻 User Authentication – Register & Login for users<br>
+              &nbsp;&nbsp;&nbsp;🖥️ Admin Panel – Admin can manage:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👥 Users<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🐾 Pets<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎁 Pet products<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📢 Lost pet notices<br>
+              &nbsp;&nbsp;&nbsp;🧺 Shopping Cart System<br>
+              &nbsp;&nbsp;&nbsp;⭐ Feedback System where users can submit reviews<br>
+              &nbsp;&nbsp;&nbsp;👀 Public Review Display showing real users feedback<br>
+              &nbsp;&nbsp;&nbsp;💳 Online Payment support with card payment option<br>
+              &nbsp;&nbsp;&nbsp;🌐 Social Media Integration - Facebook • Instagram • WhatsApp`,
       stack: ["HTML", "CSS", "JavaScript", "PHP", "MySql"],
       images: [
         "img/LovPet1.png",
@@ -117,6 +167,25 @@ const data = {
         "img/LovPet9.png",
         "img/LovPet10.png",
       ],
+      links: { demo: "#" },
+    },
+    {
+      title: "BMI Calculator & Automation Pipeline",
+      description: `This system is a localized health monitoring web application designed to calculate Body Mass Index (BMI) with a fully automated modern DevOps deployment pipeline.<br/><br/>
+            ✨ Key Features:<br/>
+              &nbsp;&nbsp;&nbsp;🌐 Fully Localized Sinhala User Interface<br/>
+              &nbsp;&nbsp;&nbsp;📊 Real-time BMI Calculation based on height & weight<br/>
+              &nbsp;&nbsp;&nbsp;🧑‍💻 Built with Streamlit for a clean & minimalist UI<br/>
+              &nbsp;&nbsp;&nbsp;🐋 Fully Dockerized application for consistent environments<br/>
+              &nbsp;&nbsp;&nbsp;⚙️ Automated CI/CD pipeline using GitHub Actions<br/>
+              &nbsp;&nbsp;&nbsp;📦 Automated build and seamless deployment workflows<br/>
+              &nbsp;&nbsp;&nbsp;🔄 Quick app rerun and configuration settings<br/>
+              &nbsp;&nbsp;&nbsp;🎥 Built-in screencast recording feature<br/>
+              &nbsp;&nbsp;&nbsp;🛠️ Dedicated developer options mode<br/>
+              &nbsp;&nbsp;&nbsp;🧹 Instant cache clearing capability<br/>
+              &nbsp;&nbsp;&nbsp;📄 Print-ready page layout support`,
+      stack: ["Python", "Streamlit", "Docker", "GitHub Actions"],
+      images: ["img/bmi1.png", "img/bmi2.png"],
       links: { demo: "#" },
     },
   ],
@@ -224,7 +293,7 @@ function renderProjects() {
             
             <div class="p-6">
                 <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">${project.title}</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-3">${project.description}</p>
+                <p class="text-gray-400 text-sm mb-4">${project.description}</p>
                 <div class="flex flex-wrap gap-2 text-xs font-mono text-gray-500 mb-4">
                     ${project.stack.map((tech) => `<span class="px-2 py-1 bg-white/5 rounded">${tech}</span>`).join("")}
                 </div>

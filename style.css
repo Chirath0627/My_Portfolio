@@ -234,14 +234,26 @@ body.light-mode textarea:focus {
   }
 }
 
-/* Project Card Hover */
+/* Project Card Styles */
 .project-card {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(0, 243, 255, 0.2);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px -10px rgba(0, 243, 255, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 243, 255, 0.4);
+  border-color: var(--primary-color);
+}
+
+/* Light Mode Overrides for Project Card */
+body.light-mode .project-card {
+  border: 2px solid rgba(0, 153, 161, 0.2);
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0 10px 30px -10px rgba(0, 153, 161, 0.4);
+  border-color: var(--primary-color);
 }
 
 .project-image-container::after {
